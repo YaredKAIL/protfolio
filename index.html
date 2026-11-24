@@ -11,7 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0d14'/%3E%3Cpath d='M16 18l16 20 16-20M32 38v10' stroke='%234c8dff' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 :root{--bg:#0a0d14;--surf:#10151f;--surf2:#151b28;--line:#212a3b;--tx:#e7eaf1;--mut:#8d97ab;--acc:#4c8dff;--teal:#2dd4bf;--glass:rgba(10,13,20,.72);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-:root[data-theme="light"]{--bg:#f6f7fb;--surf:#fff;--surf2:#eef1f7;--line:#dde2ec;--tx:#121722;--mut:#5b667a;--acc:#2358d6;--teal:#0f8f80;--glass:rgba(246,247,251,.8);color-scheme:light}
+:root[data-theme="light"]{--bg:#f3f6ff;--surf:#fff;--surf2:#eaf0ff;--line:#d6e0f5;--tx:#0f1a33;--mut:#52617f;--acc:#2f6bff;--teal:#0e9f8e;--glass:rgba(243,246,255,.82);color-scheme:light}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
@@ -161,6 +161,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 @media(max-width:960px){.links,.nv>.btn.sm.hd{display:none}.burger{display:inline-flex}.hero,.two,.case,.contact,.arch .card:first-child{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.ph-grid{grid-template-columns:1fr 1fr}.arch{grid-template-columns:1fr}}
 @media(max-width:620px){section{padding:68px 0}.grid3,.ph-grid,.ul{grid-template-columns:1fr}#home{padding-top:120px}.meta{gap:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flow{animation:none}.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+/* colourful light theme */
+:root[data-theme="light"] body{background:radial-gradient(900px 520px at 88% -4%,rgba(47,107,255,.18),transparent 60%),radial-gradient(720px 520px at -6% 28%,rgba(14,159,142,.14),transparent 60%),radial-gradient(820px 620px at 104% 72%,rgba(124,92,255,.12),transparent 60%),var(--bg);background-attachment:fixed}
+:root[data-theme="light"] .panel{background:linear-gradient(90deg,#2f6bff,#0e9f8e,#7c5cff) top/100% 3px no-repeat,#fff;box-shadow:0 14px 34px -18px rgba(47,107,255,.35)}
+:root[data-theme="light"] h1 em{background-image:linear-gradient(90deg,#2f6bff,#0e9f8e 55%,#7c5cff);-webkit-background-clip:text;background-clip:text}
+:root[data-theme="light"] .btn.pri{background:linear-gradient(135deg,#2f6bff,#6a5cff);border-color:transparent;box-shadow:0 10px 22px -10px rgba(47,107,255,.65)}
+:root[data-theme="light"] .btn:not(.pri){background:#fff}
+:root[data-theme="light"] .links a.on,:root[data-theme="light"] .menu a.on{background:#e3ecff;color:#1f3a8a}
+:root[data-theme="light"] .logo{box-shadow:0 6px 14px -6px rgba(47,107,255,.6);color:#fff}
+:root[data-theme="light"] .status{background:#fff;box-shadow:0 8px 20px -12px rgba(47,107,255,.4)}
+:root[data-theme="light"] #home::before{background-image:linear-gradient(rgba(47,107,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(47,107,255,.14) 1px,transparent 1px);opacity:.9}
+:root[data-theme="light"] .tag{background:#eaf0ff;border-color:#cddcff;color:#1f3a8a}
+:root[data-theme="light"] .grid3>.card:nth-child(3n+2) .tag{background:#e2f7f4;border-color:#b9ebe4;color:#0b6b60}
+:root[data-theme="light"] .grid3>.card:nth-child(3n) .tag{background:#efeaff;border-color:#d8cfff;color:#4b36b3}
+:root[data-theme="light"] .grid3>.card:nth-child(3n+2) h3 .ico{color:#0e9f8e}
+:root[data-theme="light"] .grid3>.card:nth-child(3n) h3 .ico{color:#7c5cff}
+:root[data-theme="light"] .grid3>.card.learn .tag{background:transparent;color:var(--mut);border-style:dashed}
+:root[data-theme="light"] .nd rect{fill:#fff;stroke:#c3d3fb}
+:root[data-theme="light"] .nd.hub rect{fill:#e3ecff;stroke:#2f6bff}
+:root[data-theme="light"] .tab{background:#fff}
+:root[data-theme="light"] .tab[aria-selected=true]{background:linear-gradient(#fff,#eaf0ff);box-shadow:0 10px 22px -14px rgba(47,107,255,.6)}
+:root[data-theme="light"] .layers div{background:#fff;border-color:#d6e0f5}
+:root[data-theme="light"] .layers div.k{background:#e3ecff;border-color:#2f6bff}
+:root[data-theme="light"] .ph-grid div{background:#fff}
+:root[data-theme="light"] .ph-grid div:hover{background:#f0f5ff}
+:root[data-theme="light"] .ph-grid div:nth-child(3n+2) i{color:#0e9f8e}
+:root[data-theme="light"] .ph-grid div:nth-child(3n) i{color:#7c5cff}
+:root[data-theme="light"] .ph-grid div:nth-child(3n+1) i{color:#2f6bff}
+:root[data-theme="light"] .tl::before{background:linear-gradient(135deg,#2f6bff,#0e9f8e)}
+:root[data-theme="light"] section:nth-of-type(even){background:linear-gradient(180deg,rgba(255,255,255,.65),rgba(255,255,255,.1))}
+:root[data-theme="light"] input,:root[data-theme="light"] textarea{background:#f7f9ff}
 </style>
 </head>
 <body>
@@ -244,11 +274,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <script>
 /* ============ EDIT YOUR CONTENT HERE ============ */
 const CONFIG={
-  email:"Yaredda19@gmail.com",            
-  github:"https://github.com/YaredKAIL",
-  linkedin:"www.linkedin.com/in/yared-deribe-fsd",
-  cv:"Resume.pdf",
-  availability:"Open to select opportunities",
+  email:"Yaredda19@gmail.com",            // e.g. "you@example.com"  (contact form uses mailto: this address)
+  github:"https://github.com/YaredKAIL",           // full URL, e.g. "https://github.com/your-handle"
+  linkedin:"https://www.linkedin.com/in/yared-deribe-fsd",         // full URL
+  cv:"Resume.pdf",               // URL or relative path to your CV PDF, e.g. "cv.pdf"
+  availability:"Open to select opportunities",   // edit status text
 };
 const SKILLS=[
  {t:"Backend Engineering",d:"Secure, contract-first services.",i:"server",s:["Java","Spring Boot","Spring Security","REST API design","WebClient","Microservices fundamentals","AuthN / AuthZ","Keycloak","JWT","MySQL","Flyway","Gradle","Maven"]},
@@ -283,7 +313,16 @@ const DIAG={
  flutter:stack([{t:"Presentation",s:"widgets · Riverpod",d:"Screens and reusable components; state with Riverpod."},{t:"Domain",s:"Freezed models",hub:1,d:"Immutable models and business rules."},{t:"Data",s:"repositories · Dio",d:"REST integration and mapping."}]),
  angular:fan({t:"App shell",s:"nav · auth",d:"Consistent navigation, authentication and onboarding."},[{t:"Module A",d:"Reusable business module."},{t:"Module B",d:"Reusable business module."},{t:"Shared UI",d:"Reusable components."},{t:"API layer",d:"Typed API integration."}])
 };
+DIAG.erp={H:250,n:[{id:"a",t:"Applications",s:"Flutter · Angular",x:160,y:10,w:240,d:"Mobile and web front ends."},{id:"b",t:"Backend services",s:"Java · Spring Boot · REST",x:130,y:92,w:300,hub:1,d:"Business logic, validation and APIs. Illustrative layout."},{id:"t",t:"Transportation",s:"module",x:10,y:188,w:160,d:"Transportation module I worked on."},{id:"l",t:"Logistics",s:"module",x:200,y:188,w:160,d:"Logistics module I worked on."},{id:"f",t:"Finance",s:"Reports · General Ledger",x:390,y:188,w:160,d:"Financial Report and General Ledger modules I contributed to."}],e:[["a","b"],["b","t"],["b","l"],["b","f"]]};
 const PROJECTS=[
+ {n:"Enterprise ERP System",c:"Enterprise Software / ERP",st:"Active · private",dg:"erp",
+  desc:"An ERP platform serving several business domains. I worked on the Transportation and Logistics modules and contributed to the Financial Report and General Ledger modules.",
+  prob:"Transport, logistics and finance each have their own workflows, yet the business needs their data to stay consistent.",
+  con:["Worked on the Transportation module.","Worked on the Logistics module.","Contributed to the Financial Report module.","Contributed to the General Ledger module.","Turned business requirements into backend services, APIs and application screens."],
+  stack:["Java","Spring Boot","REST APIs","Relational database","Flutter","Angular"],
+  dec:["Each business domain handled as its own module with clear boundaries."],
+  ch:["Keeping data consistent across transport, logistics and finance."],
+  note:"Private, company-owned code. Module-level detail is kept brief and the diagram is illustrative."},
  {n:"Enterprise Merchant Platform",c:"Enterprise Software Engineering",st:"In production use · private",dg:"ecosystem",
   desc:"A merchant platform organized around modular business capabilities and independently built plugins. It brings together a merchant-facing app, backend-for-frontend services and separate business services.",
   prob:"Teams build business capabilities independently, yet merchants need one coherent app, one identity and safe access to only their own data.",
