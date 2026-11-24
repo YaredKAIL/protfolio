@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yared Deribe — Full-Stack Software Engineer</title>
+<meta name="description" content="Yared Deribe is a full-stack software engineer building secure Spring Boot backends, Flutter mobile apps and modular enterprise platforms.">
+<meta property="og:title" content="Yared Deribe — Full-Stack Software Engineer">
+<meta property="og:description" content="Backend engineering, enterprise merchant platforms and cross-platform mobile development with Java, Spring Boot, Flutter and Angular.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0d14'/%3E%3Cpath d='M16 18l16 20 16-20M32 38v10' stroke='%234c8dff' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0a0d14;--surf:#10151f;--surf2:#151b28;--line:#212a3b;--tx:#e7eaf1;--mut:#8d97ab;--acc:#4c8dff;--teal:#2dd4bf;--glass:rgba(10,13,20,.72);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#f6f7fb;--surf:#fff;--surf2:#eef1f7;--line:#dde2ec;--tx:#121722;--mut:#5b667a;--acc:#2358d6;--teal:#0f8f80;--glass:rgba(246,247,251,.8);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--glass);backdrop-filter:blur(14px);z-index:60}
+h1,h2,h3{font-family:"Space Grotesk",Inter,system-ui,sans-serif;line-height:1.12;letter-spacing:-.02em;margin:0}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:96px 0;position:relative}
+.eyebrow{font:500 12px/1 "JetBrains Mono",ui-monospace,monospace;color:var(--teal);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:block}
+h2{font-size:clamp(28px,4.4vw,44px);max-width:20ch}
+.lead{color:var(--mut);max-width:62ch;margin:18px 0 0}
+.sh{margin-bottom:48px}
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:var(--glass);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nv{display:flex;align-items:center;gap:18px;height:64px}
+.brand{font:600 17px "Space Grotesk",Inter,sans-serif;text-decoration:none;display:flex;gap:10px;align-items:center;margin-right:auto}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--teal));display:grid;place-items:center;color:#06101e;font:700 13px "Space Grotesk",sans-serif}
+.links{display:flex;gap:2px}
+.links a{font-size:14px;color:var(--mut);text-decoration:none;padding:8px 11px;border-radius:8px;transition:color .2s,background .2s}
+.links a:hover{color:var(--tx)}
+.links a.on{color:var(--tx);background:var(--surf2)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 14px/1 Inter,sans-serif;padding:12px 18px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;text-decoration:none;transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{border-color:var(--acc);transform:translateY(-1px)}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.pri:hover{filter:brightness(1.1)}
+.btn.sm{padding:9px 13px;font-size:13px}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ib{width:38px;height:38px;padding:0;justify-content:center}
+.burger{display:none}
+.menu{display:none;border-top:1px solid var(--line);padding:10px 22px 18px}
+.menu a{display:block;padding:12px 4px;text-decoration:none;color:var(--mut);border-bottom:1px solid var(--line)}
+.menu a.on{color:var(--tx)}
+.menu.open{display:block}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+/* hero */
+#home{padding-top:150px;padding-bottom:70px;overflow:hidden}
+#home::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(ellipse 70% 60% at 70% 40%,#000,transparent);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 70% 40%,#000,transparent)}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;position:relative}
+.status{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:var(--mut);border:1px solid var(--line);background:var(--surf);padding:7px 14px;border-radius:99px;margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,.16)}
+h1{font-size:clamp(38px,6.2vw,70px)}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:54ch;margin:24px 0 0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;color:var(--mut);font-size:13px}
+.meta b{display:block;color:var(--tx);font:600 22px "Space Grotesk",sans-serif}
+.panel{background:var(--surf);border:1px solid var(--line);border-radius:14px}
+.svgbox{padding:14px}
+svg text{font-family:"JetBrains Mono",ui-monospace,monospace}
+.flow{stroke-dasharray:5 6;animation:dash 1.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-22}}
+.nd{cursor:pointer}
+.nd rect{fill:var(--surf2);stroke:var(--line);stroke-width:1;transition:stroke .2s,fill .2s}
+.nd:hover rect,.nd.sel rect,.nd:focus rect{stroke:var(--acc)}
+.nd.hub rect{stroke:var(--acc);fill:rgba(76,141,255,.12)}
+.nd text{fill:var(--tx);font-size:12px}
+.nd .s{fill:var(--mut);font-size:10px}
+.cap{font-size:13px;color:var(--mut);padding:12px 16px 4px;min-height:58px;border-top:1px solid var(--line);margin-top:6px}
+.cap b{color:var(--tx)}
+/* about */
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:48px}
+.prose p{color:var(--mut);margin:0 0 16px}
+.prose p:first-child{color:var(--tx);font-size:18px}
+.hl{display:grid;gap:12px}
+.hl div{padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.hl .ico{color:var(--teal);margin-top:3px}
+.hl strong{display:block;font-weight:600}
+.hl span{color:var(--mut);font-size:14px}
+/* skills */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:24px}
+.card h3{font-size:18px;margin-bottom:6px;display:flex;gap:10px;align-items:center}
+.card h3 .ico{color:var(--acc)}
+.card .d{color:var(--mut);font-size:14px;margin:0 0 16px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font:12px/1 "JetBrains Mono",ui-monospace,monospace;color:var(--tx);background:var(--surf2);border:1px solid var(--line);padding:7px 9px;border-radius:6px}
+.card.learn{border-style:dashed}
+.card.learn h3 .ico{color:var(--teal)}
+.card.learn .tag{color:var(--mut);background:transparent}
+/* experience */
+.tl{position:relative;padding-left:30px;border-left:1px solid var(--line);margin-left:6px}
+.tl::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px rgba(76,141,255,.15)}
+.tl .when{font:12px "JetBrains Mono",monospace;color:var(--teal)}
+.tl h3{font-size:24px;margin:8px 0 4px}
+.tl .co{color:var(--mut);margin-bottom:22px}
+.ph{border-bottom:1px dashed var(--mut)}
+.ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;padding:0;margin:0;list-style:none}
+.ul li{color:var(--mut);font-size:15px;padding-left:20px;position:relative}
+.ul li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--acc)}
+/* projects */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:22px;scrollbar-width:thin}
+.tab{flex:none;text-align:left;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surf);color:var(--mut);cursor:pointer;font:500 14px Inter,sans-serif;transition:all .2s}
+.tab small{display:block;font:11px "JetBrains Mono",monospace;margin-bottom:3px;color:var(--teal)}
+.tab:hover{color:var(--tx)}
+.tab[aria-selected=true]{color:var(--tx);border-color:var(--acc);background:var(--surf2)}
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+.case .head{grid-column:1/-1;display:flex;gap:18px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+.case h3{font-size:clamp(24px,3.4vw,34px)}
+.badge{font:11px "JetBrains Mono",monospace;padding:6px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.case .box{padding:22px}
+.case h4{font:500 12px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:0 0 10px}
+.case .box+.box{margin-top:16px}
+.case p{margin:0 0 6px;color:var(--mut);font-size:15px}
+.case ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.case li{color:var(--mut);font-size:14.5px;padding-left:18px;position:relative}
+.case li::before{content:"";position:absolute;left:0;top:.75em;width:7px;height:1px;background:var(--acc)}
+.note{font-size:12.5px;color:var(--mut);padding:12px 16px 14px;border-top:1px solid var(--line)}
+.links2{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+/* architecture */
+.arch{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.arch .card:first-child{grid-column:1/-1}
+.arch .card{display:grid;gap:20px}
+.arch .card:first-child{grid-template-columns:1fr 1fr;align-items:center}
+.arch p{color:var(--mut);font-size:14.5px;margin:0 0 10px}
+.arch p b{color:var(--tx);font-weight:600}
+.layers{display:grid;gap:6px;justify-items:stretch}
+.layers div{font:12px "JetBrains Mono",monospace;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surf2);display:flex;justify-content:space-between;gap:10px}
+.layers div span{color:var(--mut)}
+.layers div.k{border-color:var(--acc);background:rgba(76,141,255,.1)}
+/* philosophy */
+.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ph-grid div{background:var(--surf);padding:26px 24px;transition:background .2s}
+.ph-grid div:hover{background:var(--surf2)}
+.ph-grid i{font:normal 12px "JetBrains Mono",monospace;color:var(--teal);display:block;margin-bottom:12px}
+.ph-grid p{margin:0;font:500 17px/1.4 "Space Grotesk",Inter,sans-serif}
+.learn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.ct a,.ct .off{display:flex;gap:14px;align-items:center;padding:16px 18px;margin-bottom:10px;text-decoration:none}
+.ct .ico{color:var(--acc)}
+.ct small{display:block;color:var(--mut);font-size:12px}
+.ct .off{color:var(--mut)}
+.ct .off b{color:var(--tx);font-weight:500;border-bottom:1px dashed var(--mut)}
+form{padding:24px;display:grid;gap:14px}
+label{font-size:13px;color:var(--mut);display:grid;gap:7px}
+input,textarea{font:15px Inter,sans-serif;color:var(--tx);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:12px 14px;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--acc)}
+textarea{min-height:130px;resize:vertical}
+.msg{font-size:13px;color:var(--mut);min-height:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--surf2);border:1px solid var(--acc);padding:12px 18px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:all .3s;z-index:80;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:960px){.links,.nv>.btn.sm.hd{display:none}.burger{display:inline-flex}.hero,.two,.case,.contact,.arch .card:first-child{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.ph-grid{grid-template-columns:1fr 1fr}.arch{grid-template-columns:1fr}}
+@media(max-width:620px){section{padding:68px 0}.grid3,.ph-grid,.ul{grid-template-columns:1fr}#home{padding-top:120px}.meta{gap:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flow{animation:none}.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<nav aria-label="Primary"><div class="wrap nv">
+<a class="brand" href="#home"><span class="logo">YD</span>Yared Deribe</a>
+<div class="links" id="links"></div>
+<a class="btn sm hd" href="#contact" data-cv="0">Contact</a>
+<button class="btn sm hd" id="cv">CV</button>
+<button class="btn sm ib" id="theme" aria-label="Toggle light or dark theme"></button>
+<button class="btn sm ib burger" id="burger" aria-label="Open menu" aria-expanded="false"></button>
+</div><div class="menu" id="menu"></div></nav>
+
+<main>
+<section id="home"><div class="wrap hero">
+<div>
+<span class="status"><i class="dot"></i><span id="avail"></span></span>
+<h1>Engineering Scalable Systems. <em>Building Products That Matter.</em></h1>
+<p>I’m Yared, a Full-Stack Software Engineer specializing in backend engineering, enterprise applications, and cross-platform mobile development.<br><br>I build secure backend services, modular enterprise platforms, and intuitive mobile experiences using Java, Spring Boot, Flutter, and Angular.</p>
+<div class="cta"><a class="btn pri" href="#projects">Explore My Work <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="#contact">Get In Touch</a></div>
+<div class="meta"><div><b>3+</b>years building software</div><div><b>Java · Dart</b>primary languages</div><div><b>Addis Ababa</b>open to remote teams</div></div>
+</div>
+<div class="panel svgbox rv"><div id="heroDiagram"></div><div class="cap" id="heroCap"></div></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="sh"><span class="eyebrow">01 / About</span><h2>Engineering Beyond the Interface.</h2></div>
+<div class="two">
+<div class="prose">
+<p>I’m a full-stack engineer who has worked on mobile apps, web platforms and backend services. Day to day that means Flutter on the phone, Angular in the browser and Java with Spring Boot behind both.</p>
+<p>What I enjoy most is following a system end to end: shaping the domain model, agreeing an API contract, writing the business rules, locking down the endpoints, wiring in other services, and then seeing it land in a screen someone actually uses.</p>
+<p>Much of my recent work sits in enterprise merchant platforms: ERP-style workflows, restaurant management, and a plugin architecture where independently built business modules plug into one merchant app. I care about clear boundaries, security, tests, and choosing the practical option over the clever one.</p>
+<p>I’m steadily deepening my knowledge of distributed systems, cloud, system design, Python and AI engineering.</p>
+</div>
+<div class="hl" id="hl"></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="sh"><span class="eyebrow">02 / Skills</span><h2>The toolkit, grouped by how I use it.</h2><p class="lead">Everything in the first five groups is used in real project work. The last group is what I’m learning and is kept apart on purpose.</p></div>
+<div class="grid3" id="skillGrid"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<div class="sh"><span class="eyebrow">03 / Experience</span><h2>Shipping features across the stack.</h2></div>
+<div class="tl rv" id="exp"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<div class="sh"><span class="eyebrow">04 / Projects</span><h2>Case studies, not screenshots.</h2><p class="lead">Most of this work is private, company-owned code, so it is described through architecture and decisions rather than source links. Public links appear only where a real URL is configured.</p></div>
+<div class="tabs" id="tabs" role="tablist" aria-label="Projects"></div>
+<div class="case rv in" id="case" role="tabpanel"></div>
+</div></section>
+
+<section id="architecture"><div class="wrap">
+<div class="sh"><span class="eyebrow">05 / Architecture</span><h2>How I Think About Software Architecture</h2><p class="lead">Principles only matter if they change decisions. Here is what each one does for me in practice.</p></div>
+<div class="arch" id="arch"></div>
+<div style="height:90px"></div>
+<div class="sh"><span class="eyebrow">06 / Philosophy</span><h2>Engineering Is More Than Writing Code.</h2></div>
+<div class="ph-grid" id="phil"></div>
+<div style="height:90px"></div>
+<div class="sh" style="margin-bottom:0"><span class="eyebrow">07 / Direction</span><h2>Always Building. Always Learning.</h2><p class="lead">I’m expanding from full-stack toward stronger backend and systems engineering. These are interests I’m actively studying, not claims of professional expertise.</p></div>
+<div class="learn-row" id="learn"></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="sh"><span class="eyebrow">08 / Contact</span><h2>Have an Interesting Problem to Solve?</h2><p class="lead">I’m always interested in connecting with engineers, founders, and teams building meaningful software products.</p></div>
+<div class="contact">
+<div class="ct" id="ct"></div>
+<form class="panel" id="form" novalidate>
+<label>Name<input id="fn" autocomplete="name" required></label>
+<label>Your email<input id="fe" type="email" autocomplete="email" required></label>
+<label>Message<textarea id="fm" required></textarea></label>
+<button class="btn pri" type="submit">Compose email</button>
+<div class="msg" id="fmsg" role="status"></div>
+</form>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Yared Deribe · Addis Ababa, Ethiopia</span><span>Designed and built by hand.</span></div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ============ EDIT YOUR CONTENT HERE ============ */
+const CONFIG={
+  email:"Yaredda19@gmail.com",            
+  github:"https://github.com/YaredKAIL",
+  linkedin:"www.linkedin.com/in/yared-deribe-fsd",
+  cv:"Resume.pdf",
+  availability:"Open to select opportunities",
+};
+const SKILLS=[
+ {t:"Backend Engineering",d:"Secure, contract-first services.",i:"server",s:["Java","Spring Boot","Spring Security","REST API design","WebClient","Microservices fundamentals","AuthN / AuthZ","Keycloak","JWT","MySQL","Flyway","Gradle","Maven"]},
+ {t:"Mobile Development",d:"Cross-platform apps with clear layers.",i:"phone",s:["Flutter","Dart","Riverpod","Freezed","GoRouter","Dio","REST integration","Localization","Responsive UI"]},
+ {t:"Frontend Engineering",d:"Modular web apps and plugin UIs.",i:"layout",s:["Angular","TypeScript","JavaScript","HTML","CSS","Angular modular architecture","Module Federation fundamentals","Plugin-based integration"]},
+ {t:"Architecture & Practices",d:"Boundaries first, frameworks second.",i:"layers",s:["Clean Architecture","Domain-Driven Design","Hexagonal","Onion","SOLID","Dependency Inversion","TDD","Unit testing","Integration testing","API contract testing"]},
+ {t:"Infrastructure & Tools",d:"Everyday delivery tooling.",i:"tool",s:["Git","GitLab","Docker","IntelliJ IDEA","VS Code","Postman","Swagger / OpenAPI","Linux fundamentals"]},
+ {t:"Currently Exploring",d:"Learning, not yet professional experience.",i:"compass",learn:1,s:["Python","AI engineering","Machine learning fundamentals","Distributed systems","Cloud engineering","DevOps"]},
+];
+const HIGHLIGHTS=[["3+ years of software development","Hands-on delivery across backend, mobile and web.","clock"],["Backend and mobile engineering","Spring Boot services and Flutter apps that talk to each other.","server"],["Enterprise applications","Merchant, ERP-style and restaurant management platforms.","building"],["Full-stack product development","From domain model to the screen.","layers"],["Continuous technical learning","Distributed systems, cloud, Python, AI.","book"]];
+const EXPERIENCE={role:"Full-Stack Software Engineer",company:"Malam Engineering · Addis Ababa, ET",when:"03/2025 — Present",items:["Developing enterprise merchant platform features.","Implementing Java / Spring Boot backend services.","Developing Flutter mobile application functionality.","Working with Angular-based web applications.","Designing and integrating REST APIs.","Implementing authentication and authorization.","Working within a modular application architecture.","Building reusable components and services.","Integrating frontend, backend and external services.","Improving maintainability and code quality.","Writing and maintaining automated tests.","Participating in code reviews and collaborative development."]};
+const EXPERIENCE2={role:"Application Developer",company:"Remote Company",when:"07/2023 — 02/2025",items:["Built two Android applications for a remote company, from requirements analysis through implementation, testing and deployment.","Designed and implemented a web portal system for ARU that streamlined access to services and information.","Worked with remote teams and stakeholders to define requirements, resolve technical problems and deliver on agreed timelines."]};
+const EDU={deg:"BSc. in Computer Science",school:"Arsi University",lang:"English (professional working) · Amharic (native)"};
+const PRINCIPLES=[
+ {t:"Backend-for-Frontend",why:["<b>Why:</b> clients should not know how many services exist behind them, or how to authenticate against each one.","<b>In practice:</b> one boundary owns token validation, merchant context, entitlement checks, request validation and downstream calls. Services stay focused on business rules, and clients get a stable contract."],l:[["Mobile / Web client",""],["Merchant BFF","auth · context · routing",1],["Business services","merchant · payment · restaurant"]]},
+ {t:"Clean Architecture",why:["<b>Why:</b> business rules outlive frameworks and databases.","<b>In practice:</b> dependencies point inward. The domain has no framework imports, repositories are interfaces, and swapping an adapter never touches a business rule."],l:[["Controllers / adapters","outer"],["Application use cases",""],["Domain model & rules","core",1]]},
+ {t:"Domain-Driven Design",why:["<b>Why:</b> code should read like the business it models.","<b>In practice:</b> clear bounded contexts (restaurant, branch, menu, order), explicit domain interfaces, and rules like the order lifecycle enforced in one place."],l:[["Restaurant",""],["Branch hierarchy",""],["Menu · Order lifecycle","aggregate",1]]},
+ {t:"Modular Architecture",why:["<b>Why:</b> independent teams need to ship independent capabilities without editing a host app.","<b>In practice:</b> plugins declare a manifest, the host decides what they may do, and everything crosses the boundary through an explicit, versioned contract."],l:[["Host shell",""],["Manifest + capabilities","contract",1],["Plugin module","isolated"]]},
+ {t:"Security Engineering",why:["<b>Why:</b> in a multi-merchant system one missing check leaks someone else’s data.","<b>In practice:</b> validate issuer, audience and expiry on every JWT; scope every query to the merchant; check role, then capability; and fail with consistent JSON errors."],l:[["JWT validation","issuer · audience · skew"],["Merchant isolation","tenant scope",1],["Role + capability checks",""]]},
+];
+const PHIL=["Understand the problem before implementation.","Design architecture before writing large amounts of code.","Keep business logic independent of infrastructure.","Build explicit and reliable API contracts.","Prefer maintainable solutions over unnecessary complexity.","Treat security as a fundamental requirement.","Test important business behavior.","Write code that other engineers can understand.","Continuously learn and improve."];
+const LEARN=["Advanced backend engineering","Distributed systems","System design","Cloud infrastructure","DevOps","Python","Artificial intelligence engineering","Robotics"];
+/* diagrams: nodes {id,t,s,d,x,y,hub}, edges [from,to] on a 560-wide canvas */
+const fan=(root,kids)=>({h:60+Math.ceil(kids.length/2)*0,n:[{id:"r",...root,x:210,y:20,w:140,hub:1},...kids.map((k,i)=>({id:"k"+i,...k,x:i%2?300:120,y:130+Math.floor(i/2)*66,w:140}))].map((n,i,a)=>n),e:kids.map((k,i)=>["r","k"+i]),H:130+Math.ceil(kids.length/2)*66});
+const stack=(arr)=>({n:arr.map((k,i)=>({id:"s"+i,...k,x:170,y:16+i*74,w:220,hub:k.hub})),e:arr.slice(1).map((k,i)=>["s"+i,"s"+(i+1)]),H:arr.length*74+10});
+const DIAG={
+ hero:{n:[{id:"c",t:"Flutter / Angular",s:"clients",x:20,y:20,w:150,d:"Merchant-facing mobile and web clients.",},{id:"b",t:"Merchant BFF",s:"auth · context",x:205,y:20,w:150,hub:1,d:"Validates JWTs, resolves merchant context and checks entitlements before anything reaches a service."},{id:"m",t:"Merchant svc",s:"",x:390,y:20,w:150,d:"Merchant profile and business data."},{id:"p",t:"Payment svc",s:"",x:390,y:92,w:150,d:"Payment processing behind the BFF."},{id:"r",t:"Restaurant svc",s:"",x:390,y:164,w:150,d:"Restaurant operations: branches, menus, orders."},{id:"db",t:"MySQL",s:"+ Flyway",x:205,y:164,w:150,d:"Each service owns its schema and migrations."}],e:[["c","b"],["b","m"],["b","p"],["b","r"],["r","db"]],H:230,cap:"Click a node to see its role."},
+ bff:{n:[{id:"c",t:"Mobile / Web Client",s:"Flutter · Angular",x:160,y:10,w:240,d:"Talks only to the BFF. Never sees downstream services."},{id:"b",t:"Merchant BFF",s:"JWT · merchant context · capabilities · validation",x:130,y:92,w:300,hub:1,d:"Controlled boundary. Owns authentication, authorization, request validation, merchant context, correlation IDs, timeouts and error mapping."},{id:"m",t:"Merchant",x:10,y:200,w:100,d:"Merchant service."},{id:"p",t:"Payment",x:120,y:200,w:100,d:"Payment service (REST + WebSocket status)."},{id:"bl",t:"Billing",x:230,y:200,w:100,d:"Billing service."},{id:"r",t:"Restaurant",x:340,y:200,w:100,d:"Restaurant service."},{id:"o",t:"Others",x:450,y:200,w:100,d:"Further business services plug in the same way."}],e:[["c","b"],["b","m"],["b","p"],["b","bl"],["b","r"],["b","o"]],H:262},
+ ecosystem:{n:[{id:"a",t:"Merchant app",s:"Flutter shell",x:10,y:20,w:150,d:"Host application with identity, navigation and payments."},{id:"w",t:"Plugin (web)",s:"Angular",x:10,y:110,w:150,d:"Independently built business UI loaded into the shell."},{id:"b",t:"Merchant BFF",s:"manifest · access",x:205,y:65,w:150,hub:1,d:"Exposes the workspace manifest and gates every plugin call."},{id:"s1",t:"Restaurant svc",x:400,y:20,w:150,d:"Independent business service."},{id:"s2",t:"Payment svc",x:400,y:110,w:150,d:"Independent business service."}],e:[["a","b"],["w","b"],["b","s1"],["b","s2"]],H:180},
+ platform:{n:[{id:"h",t:"Flutter shell",s:"host",x:20,y:20,w:150,d:"Owns identity, native navigation and device capabilities."},{id:"br",t:"Bridge",s:"handshake · dispatch",x:205,y:20,w:150,hub:1,d:"Explicit message contract between host and plugin. Requests, file uploads and external links go through here."},{id:"pl",t:"Plugin in WebView",s:"Angular",x:390,y:20,w:150,d:"Runs in a WebView and can only act through granted capabilities."},{id:"mf",t:"Manifest (BFF)",s:"routes · nav · caps",x:205,y:120,w:150,d:"Backend-driven navigation: the shell builds its bottom bar from manifest items."}],e:[["h","br"],["br","pl"],["mf","br"]],H:190},
+ service:stack([{t:"Controller",s:"OpenAPI-generated DTOs",d:"HTTP boundary and request validation."},{t:"Application",s:"use cases",d:"Orchestrates use cases."},{t:"Domain",s:"no framework imports",hub:1,d:"Business rules: order lifecycle, branch hierarchy."},{t:"Repository",s:"interfaces + MySQL adapter",d:"Persistence behind interfaces; Flyway migrations."}]),
+ flutter:stack([{t:"Presentation",s:"widgets · Riverpod",d:"Screens and reusable components; state with Riverpod."},{t:"Domain",s:"Freezed models",hub:1,d:"Immutable models and business rules."},{t:"Data",s:"repositories · Dio",d:"REST integration and mapping."}]),
+ angular:fan({t:"App shell",s:"nav · auth",d:"Consistent navigation, authentication and onboarding."},[{t:"Module A",d:"Reusable business module."},{t:"Module B",d:"Reusable business module."},{t:"Shared UI",d:"Reusable components."},{t:"API layer",d:"Typed API integration."}])
+};
+const PROJECTS=[
+ {n:"Enterprise Merchant Platform",c:"Enterprise Software Engineering",st:"In production use · private",dg:"ecosystem",
+  desc:"A merchant platform organized around modular business capabilities and independently built plugins. It brings together a merchant-facing app, backend-for-frontend services and separate business services.",
+  prob:"Teams build business capabilities independently, yet merchants need one coherent app, one identity and safe access to only their own data.",
+  con:["Work across the Flutter app, the merchant BFF and integration of business capabilities.","Merchant identity and context carried from login to every downstream call.","Capability-based access control so a plugin only does what it was granted.","API contract design between independently developed services and UI modules."],
+  stack:["Flutter","Spring Boot","Angular","JWT","REST","Merchant-scoped data"],
+  dec:["BFF as the only door between clients and services.","Plugins described by manifest and capabilities, not hard-coded screens.","Merchant scope enforced server-side, never trusted from the client."],
+  ch:["Keeping independently developed services and UI modules aligned through well-defined contracts."]},
+ {n:"Merchant BFF Service",c:"Backend Engineering",st:"Active · private",dg:"bff",
+  desc:"A Backend-for-Frontend that securely connects merchant-facing apps to independently developed business services. It owns authentication, authorization, validation, merchant context and downstream communication.",
+  prob:"Clients should not carry service-specific auth or know where each service lives, and downstream failures should not leak through as chaos.",
+  con:["Designed backend API contracts and reactive endpoints.","JWT authentication with merchant identity extraction and merchant-scoped authorization.","Role, entitlement and plugin capability validation, plus plugin status gating.","Downstream calls with WebClient: connection and response timeouts, a total deadline and pool acquire timeout.","Correlation ID propagation and standardized JSON error handling (401/403 and a unified unavailable code).","Order and audit-log listing with pagination and filters; idempotency key forwarding on order creation.","Integration tests with MockWebServer and a contract test against the service OpenAPI."],
+  stack:["Java 21","Spring Boot 3","Spring WebFlux","MySQL","Flyway","Gradle","WebClient","JWT","OpenAPI","MockWebServer"],
+  dec:["JWT settings (issuer, JWK set, audience, clock skew) grouped under one security namespace.","Payments as one shared module that plugins call, instead of each plugin owning payment logic.","Audience validation and capability enforcement on by default."],
+  ch:["Making timeouts, size limits and error mapping predictable and tested.","Real-time payment status over WebSocket with browser-safe authentication and payment ownership checks."]},
+ {n:"Restaurant Management Service",c:"Backend Engineering / Enterprise Applications",st:"Active · private",dg:"service",
+  desc:"A modular restaurant management backend for merchant restaurant operations, run as an independently managed business service and reached through the Merchant BFF.",
+  prob:"Restaurants need branches, menus and orders handled consistently, with each merchant’s data strictly separated.",
+  con:["Restaurant profile, branch management and branch hierarchy.","Menu management and the full order lifecycle.","Order pagination and filtering; audit logging with filters.","Merchant-scoped access and role-based authorization.","Request validation and OpenAPI documentation.","Automated tests with JUnit and Mockito, including security tests."],
+  stack:["Java","Spring Boot","Spring Security","MySQL","Flyway","REST","JWT","OpenAPI","JUnit","Mockito"],
+  dec:["Layer-first packages (domain, application, repository, controller) with a feature folder inside each.","Generated DTOs used everywhere except the domain, which stays framework-free.","Boot-time check that the configured JWT issuer matches the identity provider."],
+  ch:["Order consistency and a trustworthy audit trail.","Secure merchant data isolation across every query."]},
+ {n:"Flutter Merchant Application",c:"Mobile Application Engineering",st:"Active · private",dg:"flutter",
+  desc:"A cross-platform mobile app giving business owners access to merchant operations: dashboard, business information, payments and plugin-aware navigation.",
+  prob:"Merchants need a fast, reliable mobile front door to operations that live in many separate services.",
+  con:["Feature-based project structure and Flutter app architecture.","State management with Riverpod; immutable models with Freezed.","Navigation with GoRouter; REST integration with Dio.","Authentication and OTP flows; merchant dashboard.","Receive-payment flow with live status updates.","Localization, theme management and reusable UI components."],
+  stack:["Flutter","Dart","Riverpod","Freezed","GoRouter","Dio","REST","Localization"],
+  dec:["Clear separation of presentation, domain and data layers.","Reusable components over screen-specific widgets."],
+  ch:["Keeping a growing feature set maintainable as plugins and payment flows were added."]},
+ {n:"Flutter Plugin Platform",c:"Mobile Architecture / Modular Systems",st:"Proof of concept · exploratory",dg:"platform",
+  desc:"An architectural proof of concept for integrating modular business capabilities into a merchant app. A Flutter shell hosts Angular plugins in a WebView and talks to them over an explicit bridge.",
+  prob:"How can independent teams ship features into a host app while keeping clear boundaries and controlled access?",
+  con:["Plugin registration, lifecycle and capability validation.","Bridge handshake and message dispatch between shell and plugin.","Merchant context propagation into the plugin.","Backend-driven navigation: the shell’s bottom bar comes from the BFF manifest.","Host-mediated actions such as opening the native payment screen, file uploads and external links.","Unit tests for the shell’s bridge, handshake, dispatcher, registry and lifecycle."],
+  stack:["Flutter","Angular","TypeScript","Module Federation concepts","Plugin contracts","Backend-driven navigation"],
+  dec:["Plugins only reach the outside world through the bridge, so every request is mediated.","Navigation and capabilities are data (the manifest), not code in the shell."],
+  ch:["Keeping plugin and host independent while still feeling like one app."],
+  note:"Exploratory architecture. Not every concept shown is production-deployed."},
+ {n:"Angular Merchant Platform",c:"Web Development",st:"Active · private",dg:"angular",
+  desc:"A modular merchant web application with an application shell, consistent navigation and reusable business modules.",
+  prob:"Business modules built separately still need one navigation model, one look and one sign-in.",
+  con:["Angular application development with reusable UI components.","Module organization and plugin-oriented frontend architecture.","Application shell integration.","Authentication and onboarding flows; API integration.","Responsive layouts."],
+  stack:["Angular","TypeScript","HTML","CSS","Module Federation concepts"],
+  dec:["Shell owns navigation and auth; modules own business UI."],
+  ch:["Balancing plugin-style modularity with consistent UX."],
+  note:"Some architectural ideas here are experimental and not all are production-deployed."}
+];
+/* ================================================== */
+const $=s=>document.querySelector(s);
+const IC={server:'<rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/>',phone:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',layout:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',layers:'<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/>',tool:'<path d="M14 6a4 4 0 005 5l-9 9a2 2 0 01-3-3l9-9"/>',compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',building:'<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/>',book:'<path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4zM20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',gh:'<path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 2.800-.3 5.500-1.400 5.500-6a4.600 4.600 0 00-1.300-3.200 4.200 4.200 0 00-.1-3.200s-1.100-.3-3.500 1.300a12.300 12.300 0 00-6.200 0C6.500 2.800 5.400 3.100 5.400 3.100a4.200 4.200 0 00-.1 3.200A4.600 4.600 0 004 9.500c0 4.600 2.700 5.700 5.500 6-.6.600-.6 1.200-.5 2V21"/>',li:'<path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/>',pin:'<path d="M12 21s7-6.200 7-12a7 7 0 10-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/>',dl:'<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/>',moon:'<path d="M21 13a9 9 0 11-10-10 7 7 0 0010 10z"/>',menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>'};
+const ico=n=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">${IC[n]}</svg>`;
+const SEC=["Home","About","Skills","Experience","Projects","Architecture","Contact"];
+const nav=SEC.map(s=>`<a href="#${s.toLowerCase()}" data-s="${s.toLowerCase()}">${s}</a>`).join("");
+$("#links").innerHTML=nav;$("#menu").innerHTML=nav+`<div class="cta"><a class="btn pri sm" href="#contact">Contact</a><button class="btn sm" data-cvm>Download CV</button></div>`;
+$("#avail").textContent=CONFIG.availability;$("#yr").textContent=new Date().getFullYear();
+const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("show"),3200)};
+const cv=()=>CONFIG.cv?window.open(CONFIG.cv,"_blank","noopener"):toast("CV placeholder: add a file path in CONFIG.cv.");
+$("#cv").innerHTML=ico("dl")+"CV";$("#cv").onclick=cv;document.addEventListener("click",e=>{if(e.target.closest("[data-cvm]"))cv()});
+/* theme */
+const root=document.documentElement;
+const setT=t=>{root.dataset.theme=t;$("#theme").innerHTML=ico(t==="dark"?"sun":"moon");try{localStorage.setItem("yd-theme",t)}catch(e){}};
+let t0="dark";try{t0=localStorage.getItem("yd-theme")||"dark"}catch(e){}
+setT(t0);$("#theme").onclick=()=>setT(root.dataset.theme==="dark"?"light":"dark");
+/* mobile menu */
+const mb=$("#burger"),mn=$("#menu");mb.innerHTML=ico("menu");
+const tg=o=>{mn.classList.toggle("open",o);mb.setAttribute("aria-expanded",o);mb.innerHTML=ico(o?"x":"menu")};
+mb.onclick=()=>tg(!mn.classList.contains("open"));mn.addEventListener("click",e=>{if(e.target.closest("a,button"))tg(false)});
+/* diagram renderer */
+function drawDiagram(host,capEl,D){
+  const W=560,H=D.H||230,N=Object.fromEntries(D.n.map(n=>[n.id,n]));
+  const h=n=>n.h||48;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Architecture diagram">`;
+  D.e.forEach(([a,b])=>{const A=N[a],B=N[b];const x1=A.x+A.w/2,y1=A.y+h(A),x2=B.x+B.w/2,y2=B.y;
+    const side=Math.abs(A.y-B.y)<10;
+    s+=side?`<path class="flow" d="M${A.x+A.w} ${A.y+24}L${B.x} ${B.y+24}" stroke="var(--acc)" fill="none" stroke-width="1.4"/>`:`<path class="flow" d="M${x1} ${y1}C${x1} ${y1+30},${x2} ${y2-30},${x2} ${y2}" stroke="var(--acc)" fill="none" stroke-width="1.4"/>`});
+  D.n.forEach(n=>{s+=`<g class="nd ${n.hub?"hub":""}" tabindex="0" role="button" data-id="${n.id}" aria-label="${n.t}"><rect x="${n.x}" y="${n.y}" width="${n.w}" height="48" rx="8"/><text x="${n.x+n.w/2}" y="${n.y+(n.s?20:29)}" text-anchor="middle">${n.t}</text>${n.s?`<text class="s" x="${n.x+n.w/2}" y="${n.y+36}" text-anchor="middle">${n.s.length>34?n.s.slice(0,33)+"…":n.s}</text>`:""}</g>`});
+  host.innerHTML=s+"</svg>";
+  const show=id=>{const n=N[id];capEl.innerHTML=`<b>${n.t}</b> — ${n.d||""}`;host.querySelectorAll(".nd").forEach(g=>g.classList.toggle("sel",g.dataset.id===id))};
+  host.querySelectorAll(".nd").forEach(g=>{g.onclick=()=>show(g.dataset.id);g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();show(g.dataset.id)}}});
+  const first=D.n.find(n=>n.hub)||D.n[0];show(first.id);
+}
+drawDiagram($("#heroDiagram"),$("#heroCap"),DIAG.hero);
+/* about / skills / experience */
+$("#hl").innerHTML=HIGHLIGHTS.map(([a,b,i])=>`<div class="panel rv">${ico(i)}<p style="margin:0"><strong>${a}</strong><span>${b}</span></p></div>`).join("");
+$("#skillGrid").innerHTML=SKILLS.map(k=>`<div class="panel card rv ${k.learn?"learn":""}"><h3>${ico(k.i)}${k.t}</h3><p class="d">${k.d}</p><div class="tags">${k.s.map(x=>`<span class="tag">${x}</span>`).join("")}</div></div>`).join("");
+const job=(E,m)=>`<div style="margin-top:${m}px"><span class="when">${E.when}</span><h3>${E.role}</h3><div class="co">${E.company}</div><ul class="ul">${E.items.map(i=>`<li>${i}</li>`).join("")}</ul></div>`;
+$("#exp").innerHTML=job(EXPERIENCE,0)+job(EXPERIENCE2,48)+`<div style="margin-top:48px"><span class="when">Education</span><h3>${EDU.deg}</h3><div class="co">${EDU.school} · Languages: ${EDU.lang}</div></div>`;
+/* projects */
+const tabs=$("#tabs"),cs=$("#case");
+tabs.innerHTML=PROJECTS.map((p,i)=>`<button class="tab" role="tab" data-i="${i}" aria-selected="${i===0}"><small>0${i+1}</small>${p.n}</button>`).join("");
+function showProject(i){
+  const p=PROJECTS[i];
+  tabs.querySelectorAll(".tab").forEach((b,j)=>b.setAttribute("aria-selected",j===i));
+  const L=a=>`<ul>${a.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+  cs.innerHTML=`<div class="head"><div><span class="eyebrow" style="margin-bottom:10px">${p.c}</span><h3>${p.n}</h3></div><span class="badge">${p.st}</span></div>
+  <div><div class="panel box"><h4>Overview</h4><p>${p.desc}</p></div>
+  <div class="panel box"><h4>Problem it addresses</h4><p>${p.prob}</p></div>
+  <div class="panel box"><h4>My contributions</h4>${L(p.con)}</div>
+  <div class="panel box"><h4>Stack</h4><div class="tags">${p.stack.map(x=>`<span class="tag">${x}</span>`).join("")}</div></div></div>
+  <div><div class="panel"><div class="svgbox" id="cd"></div><div class="cap" id="cc"></div><div class="note">${p.note||"Private, company-owned code. Described at architecture level; no source or confidential details are published."}</div></div>
+  <div class="panel box" style="margin-top:16px"><h4>Architectural decisions</h4>${L(p.dec)}</div>
+  <div class="panel box"><h4>Engineering challenges</h4>${L(p.ch)}</div></div>`;
+  drawDiagram($("#cd"),$("#cc"),DIAG[p.dg]);
+}
+tabs.onclick=e=>{const b=e.target.closest(".tab");if(b)showProject(+b.dataset.i)};
+tabs.onkeydown=e=>{const t=[...tabs.children],i=t.indexOf(document.activeElement);if(i<0)return;if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const j=(i+(e.key==="ArrowRight"?1:t.length-1))%t.length;t[j].focus();showProject(j)}};
+showProject(0);
+/* architecture */
+$("#arch").innerHTML=PRINCIPLES.map(p=>`<div class="panel card rv"><div><h3 style="margin-bottom:14px">${p.t}</h3>${p.why.map(x=>`<p>${x}</p>`).join("")}</div><div class="layers" aria-hidden="true">${p.l.map((l,i)=>`${i?`<div style="border:0;background:none;justify-content:center;padding:0;color:var(--acc)">↓</div>`:""}<div class="${l[2]?"k":""}">${l[0]}<span>${l[1]||""}</span></div>`).join("")}</div></div>`).join("");
+$("#phil").innerHTML=PHIL.map((p,i)=>`<div class="rv"><i>0${i+1}</i><p>${p}</p></div>`).join("");
+$("#learn").innerHTML=LEARN.map(x=>`<span class="tag" style="font-size:13px;padding:10px 13px;border-style:dashed">${x}</span>`).join("");
+/* contact */
+const row=(i,l,v,href)=>href?`<a class="panel" href="${href}" ${href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${ico(i)}<span><small>${l}</small>${v}</span></a>`:`<div class="panel off">${ico(i)}<span><small>${l}</small><b>[add ${l.toLowerCase()} in CONFIG]</b></span></div>`;
+$("#ct").innerHTML=row("mail","Email",CONFIG.email,CONFIG.email&&"mailto:"+CONFIG.email)+row("gh","GitHub",CONFIG.github,CONFIG.github)+row("li","LinkedIn",CONFIG.linkedin,CONFIG.linkedin)+`<div class="panel off">${ico("pin")}<span><small>Location</small>Addis Ababa, Ethiopia</span></div><button class="btn" id="cv2" style="margin-top:6px">${ico("dl")}Resume download</button>`;
+$("#cv2").onclick=cv;
+$("#form").onsubmit=e=>{e.preventDefault();const n=$("#fn").value.trim(),m=$("#fe").value.trim(),b=$("#fm").value.trim(),o=$("#fmsg");
+  if(!n||!/^\S+@\S+\.\S+$/.test(m)||!b){o.textContent="Please fill in your name, a valid email and a message.";return}
+  if(!CONFIG.email){o.textContent="Contact email isn’t configured yet. Set CONFIG.email in the page source.";return}
+  location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent("Portfolio enquiry from "+n)}&body=${encodeURIComponent(b+"\n\n— "+n+" ("+m+")")}`;o.textContent="Opening your email app…"};
+/* scroll spy + reveal */
+const ids=SEC.map(s=>s.toLowerCase());
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll("[data-s]").forEach(a=>a.classList.toggle("on",a.dataset.s===e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+ids.forEach(i=>spy.observe(document.getElementById(i)));
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rv.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>rv.observe(el));
+</script>
+</body>
+</html>
